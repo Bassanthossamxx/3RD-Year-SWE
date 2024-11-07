@@ -218,3 +218,54 @@ This example displays three points:
 - A **green point** at position `(150.0, 150.0)` using double coordinates
 
 Each point has a size of `10`, and the background is set to white.
+Sure! Here's a simplified version of the README, focusing on key points for review:
+
+---
+
+## OpenGL Line Types : 
+
+### 7. **Basic Line (`GL_LINES`)**
+- **Purpose**: Draw a line between two points.
+- **Points needed**: 2 points (start and end).
+- **Example**: 
+
+```cpp
+glBegin(GL_LINES);
+    glVertex2f(50, 50);  // First point
+    glVertex2f(150, 150); // Second point
+glEnd();
+```
+
+#### 7.2 **Line Loop (`GL_LINE_LOOP`)**
+- **Purpose**: Connects multiple points and closes the shape by connecting the last point to the first.
+- **Points needed**: 3 or more points.
+- **Example**:
+
+```cpp
+glBegin(GL_LINE_LOOP);
+    glVertex2f(50, 50);
+    glVertex2f(150, 50);
+    glVertex2f(150, 150);
+    glVertex2f(50, 150); 
+glEnd();
+```
+
+#### 7.3 **Line Strip (`GL_LINE_STRIP`)**
+- **Purpose**: Connects a series of points with lines, but does not close the shape.
+- **Points needed**: 2 or more points.
+- **Example**:
+
+```cpp
+glBegin(GL_LINE_STRIP);
+    glVertex2f(50, 50);
+    glVertex2f(100, 100);
+    glVertex2f(150, 50);
+glEnd();
+```
+
+---
+
+## 8. Quick Summary:
+- **GL_LINES**: 2 points.
+- **GL_LINE_LOOP**: 3+ points, closes the shape.
+- **GL_LINE_STRIP**: 2+ points, doesn't close the shape.
